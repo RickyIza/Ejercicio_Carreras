@@ -1,0 +1,33 @@
+<h3>Listado de Carreras</h3>
+<table class="table table-hovered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">Modalidad</th>
+            <th scope="col">Duración</th>
+            <th scope="col">Titulo Otorgado</th>
+            <th>
+                <button [routerLink]="['/carrera/form']"  ><fa-icon [icon]="faPlus">Nuevo</fa-icon>&nbsp;</button>                    
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of carreras; let i = index" class="bg-info">
+            <td>{{i|masmas}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.departamento}}</td>
+            <td>{{item.modalidad}}</td>
+            <td>{{item.duracion}} semestres </td>
+            <td>{{ item.titulo_otorgado }}</td>
+            <td>
+                <a class="boton_ver" [routerLink]="['/carrera/card', item.idcarrera]" class="btn btn-sm btn-info btn-sm" ><fa-icon [icon]="faEye"></fa-icon></a>                    
+                <a class="boton_editar" [routerLink]="['/carrera/form', item.idcarrera]" class="btn btn-sm btn-warning btn-sm" ><fa-icon [icon]="faPencilAlt"></fa-icon></a>
+                <a class="boton_eliminar" (click)="delete(item)" class="btn btn-sm btn-danger btn-sm" ><fa-icon [icon]="faTrash"></fa-icon></a>
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>

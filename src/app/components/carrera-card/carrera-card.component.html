@@ -1,0 +1,22 @@
+<h3>{{carrera.nombre | uppercase }}</h3>
+<div class="wrapper">
+    <div class="inner">
+<fieldset>
+    <fa-icon class="mr-3 fa-2x" [icon]='faIdCard'></fa-icon><label><strong>Nombre:</strong></label>&nbsp;
+   <span>{{carrera.nombre}}</span><br>
+    
+    <fa-icon class="mr-3 fa-2x" [icon]='faBookOpen'></fa-icon><label><strong>Departamento</strong>:</label>&nbsp;
+    <span>{{carrera.departamento}}</span><br>
+    <fa-icon class="mr-3 fa-2x" [icon]='faCalendarTimes'></fa-icon><label><strong>Modalidad</strong>:</label>&nbsp;
+    <span>{{carrera.modalidad}}</span><br>
+    <fa-icon class="mr-3 fa-2x" [icon]='faIdCard'></fa-icon><label><strong>Duracion</strong>:</label>&nbsp;
+    <span>{{carrera.duracion}} semestres</span><br>
+    <fa-icon class="mr-3 fa-2x" [icon]='faUser'></fa-icon><label><strong>Coordinador</strong></label>&nbsp;
+    <span>{{carrera.coordinador}} </span><br>
+    <fa-icon class="mr-3 fa-2x" [icon]='faGenderless'></fa-icon><label><strong>Titulo Otorgado</strong></label>&nbsp;
+    <span>{{carrera.titulo_otorgado}}</span><br>
+    <button [routerLink]="['/carrera/list']" class="btn btn-info" ><fa-icon [icon]="faListAlt"></fa-icon>&nbsp;Volver</button>                    
+</fieldset>
+
+</div>
+</div>

@@ -1,0 +1,48 @@
+<br>
+<div class="wrapper">
+    <div class="inner">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="user">
+<fieldset>
+    <h3>Registrar Carrera</h3>
+    <label class="form-group">
+        <input type="text" class="form-control"  required formControlName="nombre" [(ngModel)]="carrera.nombre">
+        <span>Nombre</span>
+        <span class="border"></span>
+    </label>
+    <label class="form-group">
+        <input type="text" class="form-control"  required formControlName="departamento" [(ngModel)]="carrera.departamento">
+        <span for="">Departamento</span>
+        <span class="border"></span>
+    </label>
+    <label class="form-group">
+        <input type="text" class="form-control"  required formControlName="modalidad" [(ngModel)]="carrera.modalidad">
+        <span for="">Modalidad</span>
+        <span class="border"></span>
+    </label>
+    <label class="form-group">
+        <input type="text" class="form-control"  required formControlName="duracion" [(ngModel)]="carrera.duracion" >
+        <span for="">Duración</span>
+        <span class="border"></span>
+    </label>
+    <label class="form-group">
+        <input type="text" class="form-control"  required formControlName="coordinador" [(ngModel)]="carrera.coordinador">
+        <span for="">Cordinador</span>
+        <span class="border"></span>
+    </label>
+    <label class="form-group">
+        <input type="text" class="form-control"  required formControlName="titulo_otorgado" [(ngModel)]="carrera.titulo_otorgado" >
+        <span for="">Titulo Otorgado</span>
+        <span class="border"></span>
+    </label>
+    <button type="submit">Guardar
+        <i class="zmdi zmdi-arrow-right"></i>
+    </button>
+    <button type="reset"(click)="onReset()">Cancelar</button><br>
+
+</fieldset>
+</form>
+</div>
+</div>
+
+
+

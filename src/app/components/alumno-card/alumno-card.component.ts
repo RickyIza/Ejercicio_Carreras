@@ -4,6 +4,7 @@ import { AlumnoService } from 'src/app/services/alumno.service';
 import { ActivatedRoute } from '@angular/router';
 import { faUser, faIdCard, faCalendar, faMapMarked, faGenderless } from '@fortawesome/free-solid-svg-icons';
 import { Matricula } from 'src/app/models/matricula';
+
 import { MatriculaService } from 'src/app/services/matricula.service';
 
 @Component({
